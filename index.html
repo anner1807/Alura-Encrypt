@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="reset.css">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://developers.google.com/fonts/docs/getting_started?hl=es-419" rel="stylesheet"> 
+    <title>Proyecto-Encriptacion-Alura</title>
+</head>
+<body>
+    <header>
+        <img  class="logo" src="imagenes/logo.jpeg" alt="logo de alura">
+    </header>
+
+    <main>
+
+        <section>
+            <input class="texto-encriptado" id="texto" type="text" placeholder="Ingrese el texto aqui"
+                   onkeypress="return event.charCode == 32 || (event.charCode >= 97 && event.charCode <= 122)">
+            <div class="informacion">
+                <h1>Solo letras minusculas y sin acento</h1>
+            </div>
+            <div class="botones">
+                <button class="btn-encriptar" onclick="encriptar()"><span>Encriptar</span></button>
+                <button class="btn-desencriptar" onclick="desencriptar()"><span>Desencriptar</span></button>
+            </div>
+        </section>
+
+        <section class="cuadro-lateral">
+            <input class="texto-desencriptado" id="texto2" type="text">
+            <div class="muneco" id="muneco">
+                <img src="imagenes/muneco.png" alt="Muneco de alumno">
+            </div>
+            <div class="mensaje" id="mensaje">
+                <span>Ningun mensaje fue encontrado</span>
+                <span>Ingresar el texto que deseas encriptar o desencriptar</span>
+            </div>
+            <div>
+                <button class="copiar" id="copiar" onclick="copiar()"><span>Copiar</span></button>
+            </div>
+        </section>
+    </main>
+    <footer class="pie">
+        <h1>Creador: Anner Cuestas Esparza</h1>
+    </footer>
+    <script src="encriptador.js"></script>
+</body>
+</html>
